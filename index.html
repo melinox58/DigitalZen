@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Zen | Accompagnement Informatique & Transition Numérique Humaine</title>
+    <meta name="description" content="Digital Zen : Mélanie Martinon vous accompagne dans votre transition numérique avec sérénité. Coaching IT, création de sites web et conseil informatique à Achun (58)." />
+    
+    <!-- Tailwind CSS CDN & Config from Stitch -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "primary-fixed-dim": "#86d0f6",
+              "surface-container-high": "#e6e8eb",
+              primary: "#006485",
+              "surface-bright": "#f7f9fc",
+              "on-primary-container": "#fdfdff",
+              "surface-tint": "#006688",
+              "surface-dim": "#d8dadd",
+              "on-surface": "#181c1e",
+              "on-secondary-fixed-variant": "#28496a",
+              "secondary-fixed-dim": "#a9c9f1",
+              "primary-fixed": "#c1e8ff",
+              "on-tertiary": "#ffffff",
+              "accent-sand": "#EAD7BB",
+              tertiary: "#625c48",
+              "on-tertiary-fixed": "#1f1c0b",
+              "tertiary-fixed-dim": "#cec6ad",
+              "inverse-primary": "#86d0f6",
+              outline: "#70787e",
+              "on-tertiary-container": "#fffdff",
+              secondary: "#416183",
+              "on-background": "#181c1e",
+              "digital-glow": "#89C2D9",
+              "on-surface-variant": "#3f484d",
+              "on-primary-fixed-variant": "#004d67",
+              "on-secondary-fixed": "#001d35",
+              "on-primary-fixed": "#001e2b",
+              "primary-container": "#2c7da0",
+              "soft-ivory": "#FAF7F0",
+              "surface-container": "#eceef1",
+              "tertiary-container": "#7b755f",
+              "secondary-container": "#b4d4fd",
+              background: "#f7f9fc",
+              "on-tertiary-fixed-variant": "#4c4733",
+              "zen-teal": "#468FAF",
+              "outline-variant": "#bfc8ce",
+              "secondary-fixed": "#d1e4ff",
+              "inverse-surface": "#2d3133",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e0e3e6",
+              "surface-container-low": "#f2f4f7",
+              "on-secondary-container": "#3c5c7e",
+              "surface-container-lowest": "#ffffff",
+              surface: "#f7f9fc",
+              "surface-variant": "#e0e3e6",
+              "tertiary-fixed": "#ebe2c8",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#eff1f4"
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+            spacing: { "margin-desktop": "2.5rem", gutter: "1.5rem", "container-max": "1280px", "section-gap": "5rem", "margin-mobile": "1rem" },
+            fontFamily: {
+              "headline-lg": ["Manrope", "sans-serif"],
+              "headline-lg-mobile": ["Manrope", "sans-serif"],
+              "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+              "body-lg": ["Manrope", "sans-serif"],
+              "label-md": ["Plus Jakarta Sans", "sans-serif"],
+              "body-md": ["Manrope", "sans-serif"],
+              "display-lg": ["Manrope", "sans-serif"],
+              headline: ["Manrope", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
+              body: ["Manrope", "sans-serif"],
+              label: ["Plus Jakarta Sans", "sans-serif"]
+            },
+            fontSize: {
+              "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}],
+              "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "600"}],
+              "label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "600"}],
+              "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}],
+              "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500"}],
+              "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+              "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}]
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </head>
+  <body class="ivory-texture text-[#2c7da0] font-body-md antialiased min-h-screen flex flex-col">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
