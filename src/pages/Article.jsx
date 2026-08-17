@@ -70,7 +70,7 @@ export default function Article() {
       "description": article.metaDescription,
       "image": [article.cover],
       "datePublished": article.dateIso,
-      "dateModified": article.dateIso,
+      "dateModified": article.updatedDateIso || article.dateIso,
       "author": {
         "@type": "Person",
         "name": article.author || "Mélanie"
@@ -111,13 +111,18 @@ export default function Article() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
         <header className="mb-8 relative z-10">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
             <span className="bg-surface-container px-3 py-1 rounded-full font-label text-[12px] font-semibold text-primary tracking-wide uppercase">
               {article.category}
             </span>
-            <span className="text-outline text-sm font-label flex items-center gap-1">
+            <span className="text-outline text-sm font-label flex items-center gap-2">
               <span className="material-symbols-outlined text-[16px]">calendar_today</span>
               <time dateTime={article.dateIso}>{article.formattedDate}</time>
+              {article.updatedDate && (
+                <span className="text-[#2c7da0]/70 text-xs italic font-normal">
+                  • Mis à jour le <time dateTime={article.updatedDateIso}>{article.formattedUpdatedDate}</time>
+                </span>
+              )}
             </span>
           </div>
           <h1 className="font-headline text-[32px] md:text-[48px] font-bold leading-tight text-on-surface mb-6 tracking-tight">

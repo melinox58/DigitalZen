@@ -25,11 +25,10 @@ function formatDateFr(dateStr) {
   if (!dateStr) return '';
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return dateStr;
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
-  const formatted = date.toLocaleDateString('fr-FR', options);
-  // Capitalize month
-  return formatted.replace(/([a-zà-ÿ]+)/gi, (match, month) => {
-    return match.charAt(0).toUpperCase() + match.slice(1);
+  return date.toLocaleDateString('fr-FR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
   });
 }
 
@@ -46,11 +45,22 @@ function buildBlog() {
   for (const file of files) {
     const filePath = path.join(POSTS_DIR, file);
     const rawContent = fs.readFileSync(filePath, 'utf-8');
-    const { data, content } = matter(rawContent);
+    let { data, content } = matter(rawContent);
+
+    // 1. Si la date est absente, générer la date du jour et la réécrire dans le fichier .md
+    if (!data.date) {
+      const today = new Date().toISOString().split('T')[0]; // "YYYY-MM-DD"
+      data.date = today;
+      const updatedMarkdown = matter.stringify(content, data);
+      fs.writeFileSync(filePath, updatedMarkdown, 'utf-8');
+      console.log(`📝 Date auto-générée (${today}) fixée dans le Front Matter de ${file}`);
+    }
 
     const title = data.title || 'Sans titre';
     const slug = data.slug || slugify(title);
-    const date = data.date || new Date().toISOString().split('T')[0];
+    const date = data.date;
+    const updatedDate = data.updatedDate || null;
+    const effectiveDate = updatedDate || date;
     const htmlContent = marked.parse(content || '');
 
     posts.push({
@@ -60,6 +70,10 @@ function buildBlog() {
       date,
       dateIso: new Date(date).toISOString(),
       formattedDate: formatDateFr(date),
+      updatedDate,
+      updatedDateIso: updatedDate ? new Date(updatedDate).toISOString() : null,
+      formattedUpdatedDate: updatedDate ? formatDateFr(updatedDate) : null,
+      effectiveDateIso: new Date(effectiveDate).toISOString(),
       author: data.author || 'Digital Zen',
       tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : ['Article']),
       category: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags[0] : (data.category || 'Article'),
@@ -69,23 +83,22 @@ function buildBlog() {
     });
   }
 
-  // Trier du plus récent au plus ancien
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // 2. Tri chronologique sur la date effective (updatedDate || date), la plus récente en premier
+  posts.sort((a, b) => new Date(b.effectiveDateIso).getTime() - new Date(a.effectiveDateIso).getTime());
 
-  // Assurer la création de src/data
+  // 3. Assurer la création de src/data et écrire posts.json
   const dataDir = path.dirname(OUTPUT_DATA_PATH);
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }
 
-  // Écrire src/data/posts.json
   fs.writeFileSync(OUTPUT_DATA_PATH, JSON.stringify(posts, null, 2), 'utf-8');
   console.log(`✅ ${posts.length} articles compilés dans src/data/posts.json`);
 
-  // Génération du Sitemap XML
+  // 4. Génération du Sitemap XML
   generateSitemap(posts);
 
-  // Génération / Vérification de robots.txt
+  // 5. Génération / Vérification de robots.txt
   generateRobots();
 
   console.log('✨ Build du blog terminé avec succès !');
@@ -123,11 +136,11 @@ function generateSitemap(posts) {
     xml += `  </url>\n`;
   }
 
-  // Blog posts
+  // Blog posts (<lastmod> utilise updatedDateIso s'il existe, sinon dateIso)
   for (const post of posts) {
     xml += `  <url>\n`;
     xml += `    <loc>${SITE_URL}/blog/${post.slug}</loc>\n`;
-    xml += `    <lastmod>${post.dateIso}</lastmod>\n`;
+    xml += `    <lastmod>${post.updatedDateIso || post.dateIso}</lastmod>\n`;
     xml += `    <changefreq>monthly</changefreq>\n`;
     xml += `    <priority>0.7</priority>\n`;
     xml += `  </url>\n`;
