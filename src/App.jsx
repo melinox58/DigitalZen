@@ -36,6 +36,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Article />} />
             <Route path="/article" element={<Article />} />
             <Route path="/blog/:id" element={<Article />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
