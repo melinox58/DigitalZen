@@ -36,6 +36,17 @@ export default function MobileNav() {
         </Link>
 
         <Link
+          to="/tarifs"
+          onClick={() => setIsOpen(false)}
+          className="bg-white/90 backdrop-blur-md rounded-full pl-5 pr-2 py-2 flex items-center gap-3 text-[#2c7da0] hover:text-primary shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-colors border border-white/50"
+        >
+          <span className="font-label-md font-semibold">Tarifs</span>
+          <div className="w-10 h-10 rounded-full bg-[#2c7da0]/10 flex items-center justify-center text-[#2c7da0]">
+            <span className="material-symbols-outlined">payments</span>
+          </div>
+        </Link>
+
+        <Link
           to="/contact"
           onClick={() => setIsOpen(false)}
           className="bg-white/90 backdrop-blur-md rounded-full pl-5 pr-2 py-2 flex items-center gap-3 text-[#2c7da0] hover:text-primary shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-colors border border-white/50"

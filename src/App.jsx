@@ -9,6 +9,7 @@ import { CookieProvider } from './context/CookieContext';
 
 import Home from './pages/Home';
 import Services from './pages/Services';
+import Tarifs from './pages/Tarifs';
 import Parcours from './pages/Parcours';
 import About from './pages/About';
 import Experiences from './pages/Experiences';
@@ -31,6 +32,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/tarifs" element={<Tarifs />} />
             <Route path="/parcours" element={<Parcours />} />
             <Route path="/a-propos" element={<About />} />
             <Route path="/experiences" element={<Experiences />} />

@@ -120,6 +120,7 @@ function generateSitemap(posts) {
   const staticPages = [
     '',
     '/services',
+    '/tarifs',
     '/parcours',
     '/a-propos',
     '/experiences',

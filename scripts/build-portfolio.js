@@ -140,6 +140,7 @@ function updateSitemapWithProjects(projects) {
   const staticPages = [
     '',
     '/services',
+    '/tarifs',
     '/parcours',
     '/a-propos',
     '/experiences',
