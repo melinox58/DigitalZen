@@ -14,10 +14,9 @@ export default function Services() {
 
         <div className="relative z-10">
           <h1 className="font-display-lg text-display-lg text-primary-container mb-6">Nos Services IT</h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-6">
+          <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
             Découvrez la simplicité du numérique à travers des formations pensées pour vous. J'accompagne les particuliers avec pédagogie pour transformer la technologie en un outil accessible et serein au quotidien.
           </p>
-          <p className="font-label-sm text-label-sm text-on-surface-variant/70 uppercase tracking-widest mb-8">Dernière mise à jour : 24 Mai 2024</p>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="bg-white/60 backdrop-blur-md text-primary-container font-label-sm text-label-sm px-4 py-2 rounded-full border border-white/60 shadow-sm">Simplicité</span>
             <span className="bg-white/60 backdrop-blur-md text-primary-container font-label-sm text-label-sm px-4 py-2 rounded-full border border-white/60 shadow-sm">Adaptation</span>

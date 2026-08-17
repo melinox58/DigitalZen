@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build:blog": "node scripts/build-blog.js",
-    "build": "npm run build:blog && vite build",
+    "build:portfolio": "node scripts/build-portfolio.js",
+    "build": "npm run build:blog && npm run build:portfolio && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

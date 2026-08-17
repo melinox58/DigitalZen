@@ -7,6 +7,7 @@ author: "Mélanie"
 tags: ["Minimalisme", "Bien-être"]
 excerpt: "Comment reprendre le contrôle de votre attention dans un monde hyperconnecté et retrouver la sérénité face à vos écrans."
 cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRIUsUzOVcygJHhzfGD-k_RVLjJ4zXwOdU4t2JUQYebJyuUdj0q7Wkcuvlld9b3qpKbVChO711vgdQGALB_4vnYKLCTnuheLdPLLPjqNPlHDOG-ZIXBAauJ3yVvkLQ1yt5vnHQ_ABsvLlj-y1YhegmmyB64ljJwLikQ2EHFpn609sUN8pZz8sVHwhrN8Z---4KEPZe-z4uko0zrkLKyGPpSEaxrBk5w0nGT7LdLN5wtKfCTUq3lIbSyw"
+melanieNote: "Commencer par de petits changements est la clé. Ne cherchez pas la perfection du jour au lendemain. La transition numérique vers plus de sérénité est un chemin, pas une destination. **Prenez le temps de respirer entre deux clics.**"
 ---
 
 Dans notre société moderne, nous sommes constamment bombardés de notifications, d'e-mails et d'informations. Cette surcharge cognitive peut rapidement mener à l'épuisement professionnel ou personnel. Le minimalisme numérique n'est pas un rejet de la technologie, mais plutôt une approche intentionnelle de son utilisation.

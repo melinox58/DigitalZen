@@ -9,6 +9,8 @@ const SITEMAP_PATH = path.resolve('public/sitemap.xml');
 const ROBOTS_PATH = path.resolve('public/robots.txt');
 const SITE_URL = 'https://digitalzen.fr'; // URL canonique de base
 
+const DEFAULT_MELANIE_NOTE = "Commencer par de petits changements est la clé. Ne cherchez pas la perfection du jour au lendemain. La transition numérique vers plus de sérénité est un chemin, pas une destination. Prenez le temps de respirer entre deux clics.";
+
 function slugify(text) {
   return text
     .toString()
@@ -63,6 +65,10 @@ function buildBlog() {
     const effectiveDate = updatedDate || date;
     const htmlContent = marked.parse(content || '');
 
+    // Conversion Markdown de la note de Mélanie (support du gras, italique, liens)
+    const melanieNoteRaw = data.melanieNote || DEFAULT_MELANIE_NOTE;
+    const melanieNoteHtml = marked.parseInline(melanieNoteRaw);
+
     posts.push({
       slug,
       title,
@@ -79,7 +85,8 @@ function buildBlog() {
       category: Array.isArray(data.tags) && data.tags.length > 0 ? data.tags[0] : (data.category || 'Article'),
       excerpt: data.excerpt || '',
       cover: data.cover || 'https://lh3.googleusercontent.com/aida-public/AB6AXuBRIUsUzOVcygJHhzfGD-k_RVLjJ4zXwOdU4t2JUQYebJyuUdj0q7Wkcuvlld9b3qpKbVChO711vgdQGALB_4vnYKLCTnuheLdPLLPjqNPlHDOG-ZIXBAauJ3yVvkLQ1yt5vnHQ_ABsvLlj-y1YhegmmyB64ljJwLikQ2EHFpn609sUN8pZz8sVHwhrN8Z---4KEPZe-z4uko0zrkLKyGPpSEaxrBk5w0nGT7LdLN5wtKfCTUq3lIbSyw',
-      htmlContent
+      htmlContent,
+      melanieNoteHtml
     });
   }
 
@@ -136,7 +143,7 @@ function generateSitemap(posts) {
     xml += `  </url>\n`;
   }
 
-  // Blog posts (<lastmod> utilise updatedDateIso s'il existe, sinon dateIso)
+  // Blog posts
   for (const post of posts) {
     xml += `  <url>\n`;
     xml += `    <loc>${SITE_URL}/blog/${post.slug}</loc>\n`;

@@ -13,6 +13,7 @@ import Parcours from './pages/Parcours';
 import About from './pages/About';
 import Experiences from './pages/Experiences';
 import Portfolio from './pages/Portfolio';
+import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="/a-propos" element={<About />} />
             <Route path="/experiences" element={<Experiences />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:slug" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<Article />} />

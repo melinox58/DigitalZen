@@ -7,6 +7,7 @@ author: "Mélanie"
 tags: ["Bien-être", "Productivité"]
 excerpt: "Des méthodes simples pour transformer votre relation avec la technologie en une collaboration apaisée et productive."
 cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuCvyE8EFHiochB-XlxlEotfFl63OiqwkYBPeQdrhVwyRdtf3oAfAXylVW0j6A7IhepLWNVaqa9hE7UVKJ-T6F0J14M4Acugs4o_n4_xvfvneiwr_ohiEb3uuNRdP4aWS4536HtqSAhvqHe0iDv5fZYB1FHCKHds3lHgfHdvcp5FzCyof_K_OYsjiRSIc3OWYfEuoS4YJv97QVV1IXpw1pq-ewU8rmQoIabqJwJv_3Sh466NOfbWKSx6Ew"
+melanieNote: "Prendre du temps pour soi hors écran permet de clarifier ses pensées. Si vous vous sentez débordé(e), n'hésitez pas à consulter nos [solutions d'accompagnement](/services)."
 ---
 
 L'anxiété technologique survient souvent lorsque nous avons l'impression de subir nos applications au lieu de les maîtriser. En repensant notre usage quotidien, il est possible de retrouver un sentiment de contrôle et de calme.

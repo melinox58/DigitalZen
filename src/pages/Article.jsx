@@ -159,9 +159,10 @@ export default function Article() {
           <h3 className="font-headline text-[20px] font-semibold text-primary mb-4">
             Le mot de {article.author || 'Mélanie'}
           </h3>
-          <p className="font-body text-on-surface-variant italic mb-0 relative z-10">
-            Commencer par de petits changements est la clé. Ne cherchez pas la perfection du jour au lendemain. La transition numérique vers plus de sérénité est un chemin, pas une destination. Prenez le temps de respirer entre deux clics.
-          </p>
+          <div
+            className="font-body text-on-surface-variant italic mb-0 relative z-10 [&_a]:text-primary [&_a]:underline"
+            dangerouslySetInnerHTML={{ __html: article.melanieNoteHtml }}
+          />
         </div>
       </article>
 
