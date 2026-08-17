@@ -18,6 +18,7 @@ import Blog from './pages/Blog';
 import Article from './pages/Article';
 import MentionsLegales from './pages/MentionsLegales';
 import CGV from './pages/CGV';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-de-confidentialite" element={<MentionsLegales />} />
             <Route path="/cgv" element={<CGV />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
           <MobileNav />
