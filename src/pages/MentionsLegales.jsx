@@ -46,12 +46,13 @@ export default function MentionsLegales() {
               <span className="material-symbols-outlined text-primary-container/70" style={{ fontVariationSettings: "'FILL' 0" }}>dns</span>
               Hébergement
             </h2>
-            <p className="mb-4 text-on-surface-variant">Ce site est hébergé par :</p>
+            <p className="mb-4 text-on-surface-variant">Ce site est hébergé par : IONOS</p>
             <ul className="list-none space-y-2 pl-4 border-l-2 border-primary-container/20 text-on-surface-variant">
-              <li><strong>Firebase Hosting / Google Cloud Platform</strong></li>
-              <li>Raison sociale : Google LLC</li>
-              <li>Adresse : 1600 Amphitheatre Parkway, Mountain View, CA 94043, États-Unis</li>
-              <li>Site web : <a className="text-primary hover:underline" href="https://firebase.google.com" target="_blank" rel="noopener noreferrer">https://firebase.google.com</a></li>
+              <li><strong>IONOS</strong></li>
+              <li>Raison sociale : IONOS</li>
+              <li>Adresse : 7, place de la Gare FR 57200 Sarreguemines</li>
+              <li>Téléphone : +33.970808911</li>
+              <li>Email : <a className="text-primary hover:underline" href="mailto:hostmaster@1and1.fr">hostmaster@1and1.fr</a></li>
             </ul>
           </section>
 
