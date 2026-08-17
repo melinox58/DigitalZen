@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { sanitizeInput, isValidEmail, checkRateLimit } from '../utils/contactSecurity';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -6,18 +7,59 @@ export default function Contact() {
     email: '',
     phone: '',
     subject: 'coaching',
-    message: ''
+    message: '',
+    website: '' // Honeypot field (masqué visuellement pour piéger les robots)
   });
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) return;
+    setErrorMessage('');
+
+    // 1. Piège à bots (Honeypot) : si rempli par un robot, bloquer silencieusement sans alerter
+    if (formData.website) {
+      setSubmitted(true);
+      return;
+    }
+
+    // 2. Validation stricte du format email côté serveur / logique
+    if (!isValidEmail(formData.email)) {
+      setErrorMessage('Veuillez saisir une adresse email valide (ex: nom@domaine.fr).');
+      return;
+    }
+
+    // 3. Validation des champs obligatoires
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.message.trim()) {
+      setErrorMessage('Veuillez remplir tous les champs obligatoires.');
+      return;
+    }
+
+    // 4. Limitation de fréquence (Rate Limiting : Max 3 soumissions / 10 minutes)
+    const rateCheck = checkRateLimit(3, 10 * 60 * 1000);
+    if (!rateCheck.allowed) {
+      setErrorMessage(
+        `Limite d'envois atteinte (maximum 3 messages toutes les 10 minutes). Veuillez patienter ${rateCheck.remainingMinutes} minute(s) avant de réitérer.`
+      );
+      return;
+    }
+
+    // 5. Assainissement / Échappement des contenus (Anti-XSS / Injection)
+    const cleanPayload = {
+      name: sanitizeInput(formData.name),
+      email: sanitizeInput(formData.email),
+      phone: sanitizeInput(formData.phone),
+      subject: sanitizeInput(formData.subject),
+      message: sanitizeInput(formData.message)
+    };
+
+    console.log('Message sécurisé et assaini prêt à l\'envoi :', cleanPayload);
     setSubmitted(true);
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (errorMessage) setErrorMessage('');
   };
 
   return (
@@ -121,7 +163,7 @@ export default function Contact() {
                   Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', phone: '', subject: 'coaching', message: '' }); }}
+                  onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', phone: '', subject: 'coaching', message: '', website: '' }); setErrorMessage(''); }}
                   className="mt-4 px-6 py-2 bg-primary text-white text-sm rounded-full font-medium"
                 >
                   Envoyer un autre message
@@ -129,6 +171,27 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 flex flex-col">
+                {/* Champ Honeypot (Piège à robots, masqué visuellement en CSS) */}
+                <div style={{ display: 'none' }} aria-hidden="true">
+                  <label htmlFor="website">Ne pas remplir ce champ si vous êtes un humain</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {errorMessage && (
+                  <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-2">
+                    <span className="material-symbols-outlined text-red-500 text-base mt-0.5">error</span>
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <div>
                   <label className="block font-label-md text-label-md text-on-surface mb-2" htmlFor="name">
                     Nom complet *
