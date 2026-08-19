@@ -27,7 +27,7 @@ export default function Navbar() {
             Tarifs
           </Link>
           <Link to="/parcours" className={`font-label-md text-label-md transition-colors ${isActive('/parcours') ? 'text-[#2c7da0] font-bold' : 'text-[#2c7da0]/70 hover:text-primary'}`}>
-            Mon Parcours
+            À propos
           </Link>
           <Link to="/portfolio" className={`font-label-md text-label-md transition-colors ${isActive('/portfolio') ? 'text-[#2c7da0] font-bold' : 'text-[#2c7da0]/70 hover:text-primary'}`}>
             Portfolio

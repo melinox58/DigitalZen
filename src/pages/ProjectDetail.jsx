@@ -133,9 +133,23 @@ export default function ProjectDetail() {
             {project.title}
           </h1>
 
-          <p className="font-body text-[18px] text-on-surface-variant leading-relaxed max-w-3xl">
+          <p className="font-body text-[18px] text-on-surface-variant leading-relaxed max-w-3xl mb-6">
             {project.description}
           </p>
+
+          {project.externalUrl && (
+            <div className="mt-4">
+              <a
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-label font-semibold text-sm hover:bg-primary-container transition-all shadow-md"
+              >
+                Voir la galerie du projet
+                <span className="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          )}
         </header>
 
         {/* Cover Image */}

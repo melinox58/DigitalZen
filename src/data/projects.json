@@ -1,16 +1,16 @@
 [
   {
-    "slug": "proposition-site-web",
-    "title": "Proposition de site web",
+    "slug": "portfolio-digital",
+    "title": "Portfolio digital",
     "category": "sites-web",
     "categoryTag": "SITES WEB",
     "client": "Studio Digital Zen",
     "date": "2026-08-17",
     "dateIso": "2026-08-17T00:00:00.000Z",
     "formattedDate": "17 août 2026",
-    "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuAfV_HLAAcppkEeMt9MSqvSkrYrCIAIldw3DtrsGsx_Mn_dJMcUDjliP72TVP96036mjUl-X_FRkgJjtqvJf-9DkLsftq8iqAVNRkDxQh9zjgWFssF6HvzEaaK20R-lCbqZQU7uvPAYWhtM6-Oed7Zjuuc9ixrFekLx0hbv6t3iCg8adHT330Iq64-aAjMQJC67Oe_Ni32i7fpfFro_Q_vwdmxVd5629uh6ofb60qEW2EKTg7TZdIhxAg",
+    "cover": "/portfolio/portfolio-digital.png",
     "images": [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAfV_HLAAcppkEeMt9MSqvSkrYrCIAIldw3DtrsGsx_Mn_dJMcUDjliP72TVP96036mjUl-X_FRkgJjtqvJf-9DkLsftq8iqAVNRkDxQh9zjgWFssF6HvzEaaK20R-lCbqZQU7uvPAYWhtM6-Oed7Zjuuc9ixrFekLx0hbv6t3iCg8adHT330Iq64-aAjMQJC67Oe_Ni32i7fpfFro_Q_vwdmxVd5629uh6ofb60qEW2EKTg7TZdIhxAg"
+      "/portfolio/portfolio-digital.png"
     ],
     "description": "Architecture épurée sous une interface fluide. Une refonte technique complète alliant performance brute et esthétisme minimaliste.",
     "metaDescription": "Découvrez notre projet de création de site web épuré et ultra-performant.",
@@ -19,6 +19,7 @@
       "React",
       "UX/UI"
     ],
+    "externalUrl": "https://melinox58.github.io/Portfolio/",
     "htmlContent": "<p>Architecture épurée sous une interface fluide. Une refonte technique complète alliant performance brute et esthétisme minimaliste.</p>\n<h2>Objectifs du projet</h2>\n<ul>\n<li>Création d&#39;une interface responsive et moderne.</li>\n<li>Temps de chargement ultrarapide.</li>\n<li>Navigation fluide et intuitive centrée sur l&#39;expérience utilisateur.</li>\n</ul>\n"
   },
   {
@@ -41,6 +42,7 @@
       "Illustration",
       "Artisanat"
     ],
+    "externalUrl": null,
     "htmlContent": "<p>Création ou reproduction de dessins manuels pour accompagner votre communication de marque.</p>\n<h2>Approche créative</h2>\n<p>Chaque illustration est conçue à la main pour apporter une touche humaine authentique et chaleureuse.</p>\n"
   },
   {
@@ -63,6 +65,7 @@
       "Impression",
       "Événementiel"
     ],
+    "externalUrl": null,
     "htmlContent": "<p>Supports physiques conçus pour capter l&#39;attention lors d&#39;événements. Ex: totems, bannières, flyers, affiches, etc.</p>\n<h2>Supports réalisés</h2>\n<ul>\n<li>Totems et kakémonos autoportants.</li>\n<li>Bannières événementielles grand format.</li>\n<li>Flyers et plaquettes commerciales haut de gamme.</li>\n</ul>\n"
   }
 ]

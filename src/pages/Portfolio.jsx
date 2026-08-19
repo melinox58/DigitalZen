@@ -93,15 +93,29 @@ export default function Portfolio() {
               <p className="text-on-surface-variant/70 text-sm leading-relaxed mb-6 line-clamp-3">
                 {item.description}
               </p>
-              <Link
-                to={`/portfolio/${item.slug}`}
-                className="mt-auto flex items-center gap-2 text-[#2c7da0] font-bold text-sm group/link"
-              >
-                Voir le projet
-                <span className="material-symbols-outlined text-lg group-hover/link:translate-x-2 transition-transform">
-                  arrow_right_alt
-                </span>
-              </Link>
+              {item.externalUrl ? (
+                <a
+                  href={item.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto flex items-center gap-2 text-[#2c7da0] font-bold text-sm group/link"
+                >
+                  Voir la galerie du projet
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-2 transition-transform">
+                    open_in_new
+                  </span>
+                </a>
+              ) : (
+                <Link
+                  to={`/portfolio/${item.slug}`}
+                  className="mt-auto flex items-center gap-2 text-[#2c7da0] font-bold text-sm group/link"
+                >
+                  Voir le projet
+                  <span className="material-symbols-outlined text-lg group-hover/link:translate-x-2 transition-transform">
+                    arrow_right_alt
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
         ))}

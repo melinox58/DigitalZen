@@ -27,7 +27,7 @@ export default function About() {
         </div>
 
         {/* Profile Image */}
-        <div className="mt-8 relative max-w-md w-full z-10">
+        <div className="mt-8 md:mt-16 relative max-w-md w-full z-10">
           <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl p-2 bg-white/50 backdrop-blur-sm border border-white/40">
             <img
               alt="Mélanie Martinon"
@@ -35,9 +35,9 @@ export default function About() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjeE-5l0_K6v4_rH-nEyj4R2j2EIS4OhlMzqL2uE9Xt2HF7xHbxKdQXugEOJ8p3Qon6HJwXcHQdmRG1HkyGEI4vTvqlf9EDT9xEaWjvvbKbqY-j4i1oIMEC-YPnHVbnJeWGRFIeJNLsTFF_IDD9oP7n-eh-Mk_l3-WWIm1e6IiL9-PMpgaI89SfgkppDBp-6eF2T8y7AcnMdjuGIENrjRymkoBD6wOkeroXHRYcNvMHIQioPOWW0zhXunlvsOHMu6MTdA"
             />
           </div>
-          <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-lg flex items-center gap-3 border border-white/60">
-            <div className="bg-secondary-container p-2 rounded-full">
-              <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: '"FILL" 1' }}>code</span>
+          <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 z-20 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-white/70 flex items-center gap-3">
+            <div className="bg-secondary-container p-2.5 rounded-full flex items-center justify-center">
+              <span className="material-symbols-outlined text-primary text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>code</span>
             </div>
             <div>
               <p className="font-label-sm text-label-sm text-primary/80 uppercase tracking-wider">Expertise</p>

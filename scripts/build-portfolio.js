@@ -111,6 +111,7 @@ function buildPortfolio() {
       description: data.description || '',
       metaDescription: data.metaDescription || data.description || title,
       tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : [categoryTag]),
+      externalUrl: data.externalUrl || null,
       htmlContent
     });
   }
