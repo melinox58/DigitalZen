@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projectsData from '../data/projects.json';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
+  const [activeImageIndex, setActiveImageIndex] = useState(null);
 
   const project = projectsData.find(p => p.slug === slug) || projectsData[0] || {};
   const otherProjects = projectsData.filter(p => p.slug !== project.slug).slice(0, 2);
@@ -176,18 +177,47 @@ export default function ProjectDetail() {
             <h3 className="font-headline text-[22px] font-semibold text-primary mb-6">Galerie du projet</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {project.images.map((imgUrl, idx) => (
-                <div key={idx} className="rounded-xl overflow-hidden shadow-sm border border-outline-variant/15 aspect-video">
+                <div
+                  key={idx}
+                  onClick={() => setActiveImageIndex(idx)}
+                  className="rounded-xl overflow-hidden shadow-sm border border-outline-variant/15 aspect-video cursor-pointer bg-surface-container-low relative group"
+                >
                   <img
                     alt={`${project.title} - Aperçu ${idx + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     src={imgUrl}
                     loading="lazy"
                     width="600"
                     height="338"
                   />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="material-symbols-outlined text-white text-3xl bg-black/40 p-2 rounded-full">zoom_in</span>
+                  </div>
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Lightbox Modal */}
+        {activeImageIndex !== null && (
+          <div
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+            onClick={() => setActiveImageIndex(null)}
+          >
+            <button
+              onClick={() => setActiveImageIndex(null)}
+              className="absolute top-6 right-6 text-white text-3xl font-bold bg-white/20 hover:bg-white/40 w-12 h-12 rounded-full flex items-center justify-center transition-colors z-10"
+              aria-label="Fermer"
+            >
+              &times;
+            </button>
+            <img
+              src={project.images[activeImageIndex]}
+              alt={`${project.title} - Aperçu agrandi ${activeImageIndex + 1}`}
+              className="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
           </div>
         )}
       </article>

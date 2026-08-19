@@ -1,5 +1,56 @@
 [
   {
+    "slug": "fripnshop-enseigne",
+    "title": "Fripnshop — Enseigne",
+    "category": "plv",
+    "categoryTag": "PLV",
+    "client": "Fripnshop",
+    "date": "2026-08-18",
+    "dateIso": "2026-08-18T00:00:00.000Z",
+    "formattedDate": "18 août 2026",
+    "cover": "/portfolio/plv/Fripnshop-enseigne.png",
+    "images": [
+      "/portfolio/plv/Fripnshop-enseigne.png",
+      "/portfolio/plv/Fripnshop-enseigne.png"
+    ],
+    "description": "Conception d'une enseigne pour Fripnshop, magasin dédiée à la vente de vêtements de seconde main.",
+    "metaDescription": "Conception d'une enseigne pour Fripnshop, magasin dédiée à la vente de vêtements de seconde main.",
+    "tags": [
+      "PLV",
+      "Impression",
+      "Événementiel",
+      "Fripnshop"
+    ],
+    "externalUrl": null,
+    "htmlContent": "<p>Conception d&#39;une enseigne pour <strong>Fripnshop</strong>, magasin dédiée à la vente de vêtements de seconde main.</p>\n<h2>Objectifs &amp; Supports de Communication</h2>\n<ul>\n<li><strong>Enseigne</strong> : Intégration d&#39;une enseigne pour Fripnshop.</li>\n</ul>\n"
+  },
+  {
+    "slug": "toffy-communication-eleveurs",
+    "title": "Toffy — Communication éleveurs",
+    "category": "plv",
+    "categoryTag": "PLV",
+    "client": "Toffy",
+    "date": "2026-08-18",
+    "dateIso": "2026-08-18T00:00:00.000Z",
+    "formattedDate": "18 août 2026",
+    "cover": "/portfolio/plv/toffy-affiche-a4.png",
+    "images": [
+      "/portfolio/plv/toffy-affiche-a4.png",
+      "/portfolio/plv/toffy-depliant-recto.png",
+      "/portfolio/plv/toffy-depliant-verso.png"
+    ],
+    "description": "Conception d'une affiche A4 et d'un dépliant 3 volets pour Toffy, plateforme gratuite dédiée aux éleveurs français. Les supports mettent en avant les outils de gestion proposés aux éleveurs (publication de portées, paiements sécurisés, CRM) ainsi que l'offre d'assurance animale du partenaire Heomi, avec un appel à l'action clair via QR code pour l'inscription et la demande de devis.",
+    "metaDescription": "Conception d'une affiche A4 et d'un dépliant 3 volets pour Toffy, plateforme gratuite dédiée aux éleveurs français.",
+    "tags": [
+      "PLV",
+      "Impression",
+      "Événementiel",
+      "Toffy"
+    ],
+    "externalUrl": null,
+    "htmlContent": "<p>Conception d&#39;une affiche A4 et d&#39;un dépliant 3 volets pour <strong>Toffy</strong>, plateforme gratuite dédiée aux éleveurs français pour placer leurs animaux en toute sécurité.</p>\n<h2>Objectifs &amp; Supports de Communication</h2>\n<ul>\n<li><strong>Affiche A4</strong> : Présentation claire de la communauté Toffy et intégration de l&#39;offre partenaire assurance animale Heomi avec QR code direct.</li>\n<li><strong>Dépliant 3 volets (Recto / Verso)</strong> :<ul>\n<li>Mise en valeur des avis et témoignages d&#39;éleveurs (<em>&quot;Paroles d&#39;éleveurs&quot;</em>).</li>\n<li>Présentation détaillée des fonctionnalités clés : outils CRM gratuits, facturation 2026, paiements en ligne sécurisés et visibilité accrue auprès d&#39;adoptants qualifiés.</li>\n<li>Formules d&#39;assurances Calinia (<em>Confort, Complète, Premium, Premium Plus</em>) et avantages exclusifs pour les éleveurs partenaires.</li>\n</ul>\n</li>\n</ul>\n"
+  },
+  {
     "slug": "portfolio-digital",
     "title": "Portfolio digital",
     "category": "sites-web",
@@ -31,19 +82,24 @@
     "date": "2026-08-12",
     "dateIso": "2026-08-12T00:00:00.000Z",
     "formattedDate": "12 août 2026",
-    "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnwVjXswgkpIVW04O7ScVKPbcJLBHgQHo85jgIJTbNpJt7qAipm5k9Er9IcwGARDzuQ0NJzlzJcn1m61VPPf3ILMct9bMhwFt7mErNuKdHEX5Cwvn3nFeF1EU7XuWmbnNLL_j3rIoE-dsqlm3fHhMa9lRigwpJwf2ddWMhkE4o7XVOaENR8yYxh7XVLEi-xK20spJfo91TmmZ2sj5XDW9htltqCOwWRX8NDV6u_0YxIR18SNfuFjyqA",
+    "cover": "/portfolio/dessin/asterix-bd.jpg",
     "images": [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnwVjXswgkpIVW04O7ScVKPbcJLBHgQHo85jgIJTbNpJt7qAipm5k9Er9IcwGARDzuQ0NJzlzJcn1m61VPPf3ILMct9bMhwFt7mErNuKdHEX5Cwvn3nFeF1EU7XuWmbnNLL_j3rIoE-dsqlm3fHhMa9lRigwpJwf2ddWMhkE4o7XVOaENR8yYxh7XVLEi-xK20spJfo91TmmZ2sj5XDW9htltqCOwWRX8NDV6u_0YxIR18SNfuFjyqA"
+      "/portfolio/dessin/asterix-bd.jpg",
+      "/portfolio/dessin/lettrage-vsd.jpg",
+      "/portfolio/dessin/montagne-aquarelle.jpg",
+      "/portfolio/dessin/cygne-aquarelle.jpg",
+      "/portfolio/dessin/portrait-chat-aquarelle.jpg"
     ],
-    "description": "Création ou reproduction de dessins manuels.",
-    "metaDescription": "Projet de création et reproduction d'illustrations manuelles uniques.",
+    "description": "Une sélection de dessins et aquarelles réalisés à la main, entre crayon, feutre et couleur.",
+    "metaDescription": "Découvrez notre galerie d'illustrations manuelles et aquarelles réalisées à la main.",
     "tags": [
       "Dessin",
       "Illustration",
+      "Aquarelle",
       "Artisanat"
     ],
     "externalUrl": null,
-    "htmlContent": "<p>Création ou reproduction de dessins manuels pour accompagner votre communication de marque.</p>\n<h2>Approche créative</h2>\n<p>Chaque illustration est conçue à la main pour apporter une touche humaine authentique et chaleureuse.</p>\n"
+    "htmlContent": "<p>Une sélection de dessins et aquarelles réalisés à la main, entre crayon, feutre et couleur.</p>\n<h2>Approche créative</h2>\n<p>Chaque illustration est conçue à la main pour apporter une touche humaine authentique et chaleureuse, alliant études au crayon, lettrages stylisés et peintures à l&#39;aquarelle.</p>\n"
   },
   {
     "slug": "toutes-plv-supports-promotionnels",

@@ -4,16 +4,20 @@ category: "dessin"
 slug: "illustration-manuelle"
 date: "2026-08-12"
 client: "Atelier Zen"
-cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnwVjXswgkpIVW04O7ScVKPbcJLBHgQHo85jgIJTbNpJt7qAipm5k9Er9IcwGARDzuQ0NJzlzJcn1m61VPPf3ILMct9bMhwFt7mErNuKdHEX5Cwvn3nFeF1EU7XuWmbnNLL_j3rIoE-dsqlm3fHhMa9lRigwpJwf2ddWMhkE4o7XVOaENR8yYxh7XVLEi-xK20spJfo91TmmZ2sj5XDW9htltqCOwWRX8NDV6u_0YxIR18SNfuFjyqA"
+cover: "/portfolio/dessin/asterix-bd.jpg"
 images:
-  - "https://lh3.googleusercontent.com/aida-public/AB6AXuDZnwVjXswgkpIVW04O7ScVKPbcJLBHgQHo85jgIJTbNpJt7qAipm5k9Er9IcwGARDzuQ0NJzlzJcn1m61VPPf3ILMct9bMhwFt7mErNuKdHEX5Cwvn3nFeF1EU7XuWmbnNLL_j3rIoE-dsqlm3fHhMa9lRigwpJwf2ddWMhkE4o7XVOaENR8yYxh7XVLEi-xK20spJfo91TmmZ2sj5XDW9htltqCOwWRX8NDV6u_0YxIR18SNfuFjyqA"
-description: "Création ou reproduction de dessins manuels."
-metaDescription: "Projet de création et reproduction d'illustrations manuelles uniques."
-tags: ["Dessin", "Illustration", "Artisanat"]
+  - "/portfolio/dessin/asterix-bd.jpg"
+  - "/portfolio/dessin/lettrage-vsd.jpg"
+  - "/portfolio/dessin/montagne-aquarelle.jpg"
+  - "/portfolio/dessin/cygne-aquarelle.jpg"
+  - "/portfolio/dessin/portrait-chat-aquarelle.jpg"
+description: "Une sélection de dessins et aquarelles réalisés à la main, entre crayon, feutre et couleur."
+metaDescription: "Découvrez notre galerie d'illustrations manuelles et aquarelles réalisées à la main."
+tags: ["Dessin", "Illustration", "Aquarelle", "Artisanat"]
 ---
 
-Création ou reproduction de dessins manuels pour accompagner votre communication de marque.
+Une sélection de dessins et aquarelles réalisés à la main, entre crayon, feutre et couleur.
 
 ## Approche créative
 
-Chaque illustration est conçue à la main pour apporter une touche humaine authentique et chaleureuse.
+Chaque illustration est conçue à la main pour apporter une touche humaine authentique et chaleureuse, alliant études au crayon, lettrages stylisés et peintures à l'aquarelle.
