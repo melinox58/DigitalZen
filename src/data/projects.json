@@ -1,28 +1,32 @@
 [
   {
     "slug": "fripnshop-enseigne",
-    "title": "Fripnshop — Enseigne",
+    "title": "Fripnshop — Identité & supports de communication",
     "category": "plv",
     "categoryTag": "PLV",
     "client": "Fripnshop",
     "date": "2026-08-18",
     "dateIso": "2026-08-18T00:00:00.000Z",
     "formattedDate": "18 août 2026",
-    "cover": "/portfolio/plv/Fripnshop-enseigne.png",
+    "cover": "/portfolio/plv/fripnshop-devanture.jpg",
     "images": [
-      "/portfolio/plv/Fripnshop-enseigne.png",
-      "/portfolio/plv/Fripnshop-enseigne.png"
+      "/portfolio/plv/fripnshop-devanture.jpg",
+      "/portfolio/plv/fripnshop-logo.png",
+      "/portfolio/plv/fripnshop-affiche-journee-vintage.jpg",
+      "/portfolio/plv/fripnshop-flyer-mode.jpg",
+      "/portfolio/plv/fripnshop-flyer-presentation.jpg"
     ],
-    "description": "Conception d'une enseigne pour Fripnshop, magasin dédiée à la vente de vêtements de seconde main.",
-    "metaDescription": "Conception d'une enseigne pour Fripnshop, magasin dédiée à la vente de vêtements de seconde main.",
+    "description": "Conception de l'identité visuelle et de plusieurs supports de communication pour Fripnshop, friperie à Corbigny spécialisée dans la vente de vêtements de seconde main.",
+    "metaDescription": "Conception de logo, enseigne, affiche événementielle et flyers pour Fripnshop, friperie à Corbigny.",
     "tags": [
       "PLV",
       "Impression",
       "Événementiel",
+      "Identité visuelle",
       "Fripnshop"
     ],
     "externalUrl": null,
-    "htmlContent": "<p>Conception d&#39;une enseigne pour <strong>Fripnshop</strong>, magasin dédiée à la vente de vêtements de seconde main.</p>\n<h2>Objectifs &amp; Supports de Communication</h2>\n<ul>\n<li><strong>Enseigne</strong> : Intégration d&#39;une enseigne pour Fripnshop.</li>\n</ul>\n"
+    "htmlContent": "<p>Conception de l&#39;identité visuelle et de plusieurs supports de communication pour <strong>Fripnshop</strong>, friperie à Corbigny spécialisée dans la vente de vêtements de seconde main, dans une démarche de mode responsable et d&#39;économie alternative.</p>\n<h2>Objectifs &amp; Supports de communication</h2>\n<ul>\n<li><strong>Logo &amp; enseigne</strong> : création de l&#39;identité visuelle de la marque (typographie manuscrite rouge bordeaux) et déclinaison en enseigne de devanture.</li>\n<li><strong>Affiche événementielle</strong> : conception de l&#39;affiche pour la &quot;Journée Vintage&quot; à Corbigny, en partenariat avec les commerçants de l&#39;avenue Saint-Jean (concert, tatoueur, voitures anciennes, défilé vintage).</li>\n<li><strong>Flyer jeu-concours</strong> : support imprimé au format A5 x3, annonçant les ouvertures exceptionnelles de fin d&#39;année et un jeu-concours (&quot;trouvez le poids du sac cadeau&quot;).</li>\n<li><strong>Flyer de présentation</strong> : support recto-verso présentant l&#39;activité du magasin, les horaires d&#39;ouverture et la localisation.</li>\n</ul>\n<h2>Résultat</h2>\n<p>Une identité cohérente déclinée sur l&#39;ensemble des supports physiques du magasin — de la devanture aux flyers de communication événementielle — pour renforcer la visibilité locale de Fripnshop à Corbigny.</p>\n"
   },
   {
     "slug": "toffy-communication-eleveurs",
